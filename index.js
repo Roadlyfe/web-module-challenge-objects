@@ -15,8 +15,8 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+ return {name, price, category};
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -28,7 +28,11 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+const menuItem =[ 
+  {name: "Pizza", price: 5, category: "lunch"},
+  {name: "Flapjacks", price: 8, category: "breakfast" },
+  {name: "Flat White", price: 6, category: "coffee" }
+];
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -47,7 +51,13 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function(guest){
+    if(guest === "teacher" || guest === "student"){
+      return this.price * .75;
+    } else {
+      return this.price * .90
+    }
+  }
 }
 
 
